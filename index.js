@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const PORT = process.env.PORT || 3333;
 
 const flood = require("./flood");
 
@@ -15,6 +16,6 @@ app.post("/login", async (req,res) => {
 });
 
 
-app.listen(3333, () => {
+app.listen(PORT, () => {
     console.log("Server is running!")
 });
