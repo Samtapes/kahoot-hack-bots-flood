@@ -9,10 +9,12 @@ app.use(express.json());
 
 app.post("/login", async (req,res) => {
     const data = req.body;
+
+    console.log(data);
     
     const resposta = flood(data);
 
-    return res.json("Wait")
+    return res.json("Wait");
 });
 
 
