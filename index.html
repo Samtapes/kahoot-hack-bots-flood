@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kahoot Hack Bots</title>
+</head>
+<body>
+    <form>
+        <input type="text" name="pin" placeholder="PIN">
+        <input type="text" name="nick" placeholder="NAME PREFIX">
+        
+        <input id="sendData" type="button" value="SUBMIT">
+    </form>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript">
+
+        const btnSenData = document.getElementById("sendData");
+
+        btnSenData.onclick = function(){
+            const pin = document.getElementsByName("pin")[0].value;
+            const nick = document.getElementsByName("nick")[0].value;
+
+
+            const data = {pin: pin, nick: nick}
+
+            axios.post('https://kahoot-flood-server01.herokuapp.com/', data);
+        }
+    </script>
+</body>
+</html>
