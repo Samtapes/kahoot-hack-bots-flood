@@ -15,18 +15,17 @@ app.use(express.json());
 
 
 // CORS enabling the server01 acess all the servers server
-app.use(function(req, res, next) {
-    var allowedOrigins = ['https://kahoot-flood-server01.herokuapp.com/'];
-    var origin = req.headers.origin;
-    if(allowedOrigins.indexOf(origin) > -1){
-         res.setHeader('Access-Control-Allow-Origin', origin);
+app.use(function(req, res, next){
+    var origins = ['kahoot-flood-server01.herokuapp.com', 'kahoot-flood-server01.herokuapp.com/', 'https://kahoot-flood-server01.herokuapp.com/', 'https://kahoot-flood-server01.herokuapp.com'];
+    for(var i=0;i<origins.length;i++){
+        var origin = origins[i];
+        if(req.headers.origin.indexOf(origin) > -1){ 
+             res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
+             return;
+        }
+        // else, tough cookies. 
     }
-    //res.header('Access-Control-Allow-Origin', 'http://127.0.0.1:8020');
-    res.header('Access-Control-Allow-Methods', 'GET, OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-    res.header('Access-Control-Allow-Credentials', true);
-    return next();
-  });
+});
 
 
 
