@@ -32,7 +32,7 @@
 
 
             // Getting bots already created data
-            var res = await axios.get('https://kahoot-flood-server' + KahootServer + '.herokuapp.com/login');
+            var res = await axios.get('https://kahoot-flood-server' + KahootServer + '.herokuapp.com/');
 
             // var res = await axios.get('http://localhost:3333/login');
             console.log(res.data);
@@ -69,9 +69,9 @@
             // If is a valid pin, and if the server are not full and if this nick doens't exist will create data and if is valid
             const data = {pin: pin, nick: nick}
 
-            
+
             // Sending data to server
-            axios.post('https://kahoot-flood-server' + KahootServer + '.herokuapp.com/login', data);
+            axios.post('https://kahoot-flood-server' + KahootServer + '.herokuapp.com/', data);
 
             // axios.post('http://localhost:3333/login', data);
 
