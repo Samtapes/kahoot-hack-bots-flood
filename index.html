@@ -7,8 +7,14 @@
 </head>
 <body>
     <form>
-        <input type="text" name="pin" placeholder="PIN">
+        <input type="number" name="pin" placeholder="PIN">
         <input type="text" name="nick" placeholder="NAME PREFIX">
+
+        <select name="server">
+            <option value="01">Server 1</option>
+            <option value="02">Server 2</option>
+            <option value="03">Server 3</option>
+        </select>
         
         <input id="sendData" type="button" value="SUBMIT">
     </form>
@@ -19,14 +25,56 @@
 
         const btnSenData = document.getElementById("sendData");
 
-        btnSenData.onclick = function(){
+        btnSenData.onclick = async function(){
+
+            // Getting the server
+            const KahootServer = document.getElementsByName("server")[0].value;
+
+
+            // Getting bots already created data
+            var res = await axios.get('https://kahoot-flood-server' + KahootServer + '.herokuapp.com/login');
+
+            // var res = await axios.get('http://localhost:3333/login');
+            console.log(res.data);
+
+
+            // Getting bot info
             const pin = document.getElementsByName("pin")[0].value;
             const nick = document.getElementsByName("nick")[0].value;
 
+            
 
+            // Checking if the server are full
+            if(res.data.length >= 4) { alert("This server is full!"); return null; }
+
+
+
+            // Checking if are a valid pin
+            if(pin.length <= 4){ alert("Invalid pin! Try another!"); return null; }
+
+
+            // Checking if are a valid nickname
+            if(nick.trim().length === 0){ alert("Invalid nickname!"); return null }
+
+
+            // Checking if the bot with that username already exist
+            for(var i = 0; i < res.data.length; i++){
+                if(nick === res.data[i].nick){ alert("Change the bots username!!"); return null; }
+            }
+
+
+
+
+
+            // If is a valid pin, and if the server are not full and if this nick doens't exist will create data and if is valid
             const data = {pin: pin, nick: nick}
 
-            axios.post('https://kahoot-flood-server01.herokuapp.com/login', data);
+            
+            // Sending data to server
+            axios.post('https://kahoot-flood-server' + KahootServer + '.herokuapp.com/login', data);
+
+            // axios.post('http://localhost:3333/login', data);
+
 
             alert("Sending data");
         }
