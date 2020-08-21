@@ -13,6 +13,7 @@ var bots = [];
 app.use(express.json());
 
 
+
 // CORS enabling the server01 acess all the servers server
 app.use(function(req, res, next) {
     var allowedOrigins = ['https://kahoot-flood-server01.herokuapp.com/'];
