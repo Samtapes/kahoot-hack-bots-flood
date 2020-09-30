@@ -1,5 +1,5 @@
 # kahoot-hack-bots-flood
-This is a program that you need to start in your localhost that sends robots to a kahoot game
+This is a program just for fun, when you download and use it you agree that I have no responsibility of your acts. You need to start in your localhost that sends robots to a kahoot game
 
 # Instructions
 
