@@ -12,3 +12,7 @@ This is a program just for fun, when you download and use it you agree that I ha
 - Then open your favorite browser using this url: http://localhost:3333
 
 - Then just type the kahoot class code and the bots prefix name and enjoy!
+
+If you don't want to download this program, use this site:
+
+https://kahoot-flood-server01.herokuapp.com
