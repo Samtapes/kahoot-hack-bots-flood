@@ -21,8 +21,4 @@ This is a program just for fun, when you download and use it you agree that I ha
 
 - Then just type the kahoot class code and the bots prefix name and enjoy!
 
-If you don't want to download this program, use this site:
-
-https://kahoot-flood-server01.herokuapp.com
-
-And if the server 01 get full, just change the server in the picker
+If you want to stop the program just close your terminal (cmd)
