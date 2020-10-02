@@ -5,7 +5,7 @@ This is a program just for fun, when you download and use it you agree that I ha
 
 - Firts if you haven't Node JS install Node JS in the last stable version: https://nodejs.org/en/download/
 - Open cmd, type the project uri
-- Type:
+- Then type:
 
 > node index.js
 
