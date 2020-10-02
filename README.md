@@ -1,3 +1,9 @@
+![Downloads](https://img.shields.io/github/downloads/Samtapes/kahoot-hack-bots-flood/total)
+![LastCommit](https://img.shields.io/github/last-commit/Samtapes/kahoot-hack-bots-flood)
+![Issues](https://img.shields.io/github/issues/Samtapes/kahoot-hack-bots-flood)
+![PullRequests](https://img.shields.io/github/issues-pr/Samtapes/kahoot-hack-bots-flood)
+![Followers](https://img.shields.io/github/followers/Samtapes?label=Follow)
+
 # kahoot-hack-bots-flood
 This is a program just for fun, when you download and use it you agree that I have no responsibility of your acts. You need to start in your localhost that sends robots to a kahoot game
 
